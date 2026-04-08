@@ -25,14 +25,11 @@ const tabPanels = document.querySelectorAll('.tab-panel');
 
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Remove active class from all buttons and panels
     tabBtns.forEach(b => b.classList.remove('active'));
     tabPanels.forEach(p => p.classList.remove('active'));
 
-    // Add active class to clicked button
     btn.classList.add('active');
 
-    // Show corresponding panel
     const tabId = btn.getAttribute('data-tab');
     document.getElementById(tabId).classList.add('active');
   });
@@ -90,14 +87,35 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe sections for fade-in animation
-document.querySelectorAll('section').forEach(section => {
+// Observe all sections except hero
+document.querySelectorAll('section:not(.hero)').forEach(section => {
   section.style.opacity = '0';
-  section.style.transform = 'translateY(20px)';
+  section.style.transform = 'translateY(30px)';
   section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(section);
 });
 
-// Don't animate hero section on load
-document.querySelector('.hero').style.opacity = '1';
-document.querySelector('.hero').style.transform = 'translateY(0)';
+// ========================================
+// Typing Effect for Tagline (Optional Enhancement)
+// ========================================
+const tagline = document.querySelector('.hero-tagline');
+if (tagline) {
+  const text = tagline.textContent;
+  tagline.textContent = '';
+  tagline.style.borderRight = '2px solid var(--color-primary)';
+  
+  let i = 0;
+  const typeWriter = () => {
+    if (i < text.length) {
+      tagline.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    } else {
+      setTimeout(() => {
+        tagline.style.borderRight = 'none';
+      }, 1000);
+    }
+  };
+  
+  setTimeout(typeWriter, 800);
+}
