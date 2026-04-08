@@ -295,6 +295,7 @@ ul {
   position: relative;
   width: 320px;
   height: 400px;
+   overflow: hidden;
 }
 
 .hero-image-wrapper::after {
@@ -310,9 +311,9 @@ ul {
   transition: var(--transition);
 }
 
-.hero-image-wrapper:hover::after {
-  top: 15px;
-  left: 15px;
+.hero-image-wrapper:hover .profile-img {
+  transform: scale(1.03);
+  transition: 0.4s ease;
 }
 
 .image-placeholder {
