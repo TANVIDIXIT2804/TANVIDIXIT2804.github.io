@@ -1,37 +1,16 @@
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("visible");
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-const puzzleBtn = document.getElementById("puzzleBtn");
-const puzzleBox = document.getElementById("puzzleBox");
-const answerBtn = document.getElementById("answerBtn");
-const answer = document.getElementById("answer");
-
-puzzleBtn?.addEventListener("click", () => {
-  puzzleBox.hidden = !puzzleBox.hidden;
-  puzzleBtn.innerHTML = puzzleBox.hidden ? "Give me a puzzle <span>↗</span>" : "Hide puzzle <span>↑</span>";
-});
-
-answerBtn?.addEventListener("click", () => {
-  answer.hidden = !answer.hidden;
-  answerBtn.textContent = answer.hidden ? "Reveal answer" : "Hide answer";
-});
-
-const sections = [...document.querySelectorAll("main section[id]")];
-const navLinks = [...document.querySelectorAll(".nav nav a")];
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.style.opacity = link.getAttribute("href") === `#${entry.target.id}` ? "1" : ".55";
-      });
+const links=[...document.querySelectorAll('.nav nav a')];
+const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const id='#'+entry.target.id;
+      links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===id));
     }
   });
-}, { rootMargin: "-40% 0px -50% 0px", threshold: 0 });
+},{rootMargin:'-35% 0px -55% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
 
-sections.forEach(section => sectionObserver.observe(section));
+document.querySelectorAll('.photo-slot').forEach(slot=>{
+  const img=slot.querySelector('img');
+  if(img && img.complete && img.naturalWidth>0) slot.classList.add('has-photo');
+});
