@@ -1,11 +1,24 @@
-# Tanvi Dixit Personal Site — V2
+# Tanvi Dixit — Personal Site V3
 
-Clean comic/editorial version.
+A responsive editorial personal site for Tanvi Dixit.
 
-## Upload
-Replace the existing `index.html`, `style.css`, and `script.js` in the GitHub Pages repository.
+## Design direction
+V3 keeps the creative V2 story and language, but refines the layout for laptop, tablet and mobile:
+- editorial / personal-photo-essay feel
+- restrained comic details rather than cartoon styling
+- responsive grids and typography
+- intentional whitespace and stronger desktop proportions
+- image placeholders ready for real photography later
+- no confidential Barclays project names or internal details
 
-Keep the `assets` folder and add:
+## Files
+- index.html
+- style.css
+- script.js
+- assets/
+
+## Add photos later
+The placeholders are intentionally kept in the HTML so the layout stays stable. Real images can be added later as:
 - profile.jpg
 - me-01.jpg
 - me-02.jpg
@@ -15,7 +28,5 @@ Keep the `assets` folder and add:
 - people-03.jpg
 - tennis.jpg
 
-The site works without the photos, but the visual design is intended for real photography.
-
-## Important
-The Barclays section is intentionally high-level. Do not add confidential project names, client names, proprietary screenshots, trading details, or internal data to the public site.
+## GitHub Pages
+Replace the existing root files with these files. No build step is required.
