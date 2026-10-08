@@ -1,86 +1,37 @@
-// ========================================
-// Mobile Navigation
-// ========================================
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
-
-hamburger?.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
-
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger?.classList.remove('active');
-    navMenu?.classList.remove('active');
-  });
-});
-
-// ========================================
-// Active Nav Link on Scroll
-// ========================================
-const sections = document.querySelectorAll('section[id]');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.pageYOffset;
-  
-  sections.forEach(section => {
-    const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 100;
-    const sectionId = section.getAttribute('id');
-    const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-    
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      navLink?.classList.add('active');
-    } else {
-      navLink?.classList.remove('active');
-    }
-  });
-});
-
-// ========================================
-// Scroll Animations
-// ========================================
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+const puzzleBtn = document.getElementById("puzzleBtn");
+const puzzleBox = document.getElementById("puzzleBox");
+const answerBtn = document.getElementById("answerBtn");
+const answer = document.getElementById("answer");
+
+puzzleBtn?.addEventListener("click", () => {
+  puzzleBox.hidden = !puzzleBox.hidden;
+  puzzleBtn.innerHTML = puzzleBox.hidden ? "Give me a puzzle <span>↗</span>" : "Hide puzzle <span>↑</span>";
+});
+
+answerBtn?.addEventListener("click", () => {
+  answer.hidden = !answer.hidden;
+  answerBtn.textContent = answer.hidden ? "Reveal answer" : "Hide answer";
+});
+
+const sections = [...document.querySelectorAll("main section[id]")];
+const navLinks = [...document.querySelectorAll(".nav nav a")];
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      navLinks.forEach(link => {
+        link.style.opacity = link.getAttribute("href") === `#${entry.target.id}` ? "1" : ".55";
+      });
     }
   });
-}, observerOptions);
+}, { rootMargin: "-40% 0px -50% 0px", threshold: 0 });
 
-document.querySelectorAll('.about-card, .impact-card, .thought-card, .past-role, .project-feature').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
-
-// Add visible class styles
-const style = document.createElement('style');
-style.textContent = `
-  .visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-`;
-document.head.appendChild(style);
-
-// ========================================
-// Smooth Scroll
-// ========================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+sections.forEach(section => sectionObserver.observe(section));
