@@ -1,12 +1,21 @@
-# Tanvi Dixit — Personal Site V3.1
+# Tanvi Dixit — Personal Site
 
-Responsive refinement of the V3 personal site.
+Final responsive version.
 
-- Desktop/laptop: reduced oversized typography and tightened editorial proportions.
-- Tablet: intermediate grid and type scale.
-- Mobile: independent stacked compositions so cards, notes, photos and headings do not collide.
-- Keeps the V3 creative direction and content.
-- Image placeholders remain ready for photography.
-- No confidential Barclays project names/details.
+## Included
+- `index.html`
+- `style.css`
+- `script.js`
+- `assets/profile.jpg`
+- `assets/tanvi_resume.pdf`
 
-No build step required for GitHub Pages.
+## Design
+Editorial personal-site direction: warm paper, charcoal typography, Playfair Display + DM Sans + DM Mono, restrained green/yellow/red accents, subtle paper texture, and small comic/editorial details.
+
+## Responsive behavior
+The layout is intentionally composed for desktop, laptop/tablet, and mobile rather than simply shrinking one layout into another. Typography uses controlled `clamp()` scales and the multi-column sections stack cleanly on smaller screens.
+
+## Content
+The page keeps the agreed V3 narrative and copy. Barclays references remain intentionally high-level and do not expose internal project names or confidential details.
+
+No build step is required for GitHub Pages.
