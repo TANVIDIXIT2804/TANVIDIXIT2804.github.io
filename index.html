@@ -2,178 +2,318 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tanvi Dixit — One Person, Many Kinds of Problems</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tanvi Dixit</title>
+<meta name="description" content="Tanvi Dixit: markets, matches, people and puzzles. FX analytics at Barclays, IIT Gandhinagar, tennis.">
+<meta property="og:title" content="Tanvi Dixit">
+<meta property="og:description" content="One person, many kinds of problems.">
+<meta property="og:image" content="assets/profile.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav">
-  <a href="#top" class="brand">TANVI<span>•</span></a>
-  <nav>
-    <a href="#room">ME</a>
-    <a href="#pressure">WORK</a>
-    <a href="#people">PEOPLE</a>
-    <a href="#matches">MATCHES</a>
-    <a href="#little">LITTLE THINGS</a>
+  <a href="#top" class="brand">TANVI<span>●</span></a>
+  <nav aria-label="Sections">
+    <a href="#room">The room</a>
+    <a href="#pressure">Work &amp; play</a>
+    <a href="#people">People</a>
+    <a href="#lessons">Lessons</a>
+    <a href="#little">Little things</a>
+    <a href="#contact" class="nav-cta">Say hi</a>
   </nav>
 </header>
 
 <main id="top">
 
-<section class="hero">
+<!-- ============ HERO ============ -->
+<section class="hero wrap">
   <div class="hero-copy">
-    <div class="kicker">01 / THE PROBLEM</div>
+    <div class="kicker"><span class="dot"></span>Mumbai · Markets · Tennis</div>
     <h1>I’m a full-time<br><em>problem solver.</em></h1>
-    <p>Markets. Matches. People. Puzzles. Different settings, same instinct: understand what’s happening, figure out what matters, and make the next move.</p>
-    <div class="scroll">SCROLL ↓</div>
+    <p class="lede">Markets. Matches. People. Puzzles. Different settings, same instinct: understand what’s happening, figure out what matters, and make the next move.</p>
+    <div class="hero-actions">
+      <a href="#pressure" class="btn btn-ink">See what I work on ↓</a>
+      <a href="assets/tanvi_resume.pdf" target="_blank" rel="noopener" class="btn btn-line">Résumé ↗</a>
+    </div>
   </div>
+
   <div class="hero-visual">
     <span class="note note-a">hmm.</span>
     <span class="note note-b">what now?</span>
-    <div class="hero-photo">
+    <svg class="scribble" viewBox="0 0 120 60" aria-hidden="true"><path d="M5 40 C 30 5, 60 55, 85 20 S 112 30, 115 12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M104 8 L116 11 L110 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <figure class="hero-photo">
       <img src="assets/profile.jpg" alt="Tanvi Dixit in New York">
-    </div>
+      <figcaption>NYC · on rotation with the New York desks</figcaption>
+    </figure>
   </div>
 </section>
 
-<section class="section room" id="room">
-  <div class="section-top"><span>02 / THE ROOM</span><i>new room, same me</i></div>
+<!-- scoreboard strip -->
+<div class="scoreboard" aria-label="Quick facts">
+  <div class="wrap scoreboard-inner">
+    <div class="stat"><small>Schools</small><strong>10+</strong></div>
+    <div class="stat"><small>IIT Gandhinagar</small><strong>B.Tech ’24</strong></div>
+    <div class="stat"><small>Barclays</small><strong>FX ’24–</strong></div>
+    <div class="stat"><small>Sports</small><strong>Gold medal</strong></div>
+    <div class="stat live"><small>Current status</small><strong>Serving<span class="blink">_</span></strong></div>
+  </div>
+</div>
+
+<!-- ============ THE ROOM ============ -->
+<section class="section wrap room" id="room">
+  <div class="section-top"><span>The room</span><i>new room, same me</i></div>
   <div class="room-layout">
     <div class="room-copy">
-      <h2>I've spent a lot of time<br><em>walking into new rooms.</em></h2>
+      <h2>I’ve spent a lot of time<br><em>walking into new rooms.</em></h2>
       <p>Growing up across 10+ schools meant learning how to start over. New classrooms. New accents. New groups of people who already knew each other.</p>
-      <p>I got pretty good at figuring out the room — and finding my way into it.</p>
+      <p>I got pretty good at figuring out the room, and finding my way into it.</p>
       <div class="side-note">→ eventually, this became useful at IIT Gandhinagar. And then at Barclays.</div>
     </div>
+
     <div class="room-panels">
-      <div class="paper-panel first">
-        <div class="tiny-label">SCHOOL #01</div>
-        <div class="image-placeholder small-placeholder">PHOTO</div>
-        <div class="caption">“Hi. I'm Tanvi.”</div>
+      <div class="badges" aria-label="Name tags from school after school">
+        <div class="tag t1"><b>HELLO</b><small>my name is</small><span>Tanvi</span></div>
+        <div class="tag t2"><b>HELLO</b><small>my name is</small><span>Tanvi</span></div>
+        <div class="tag t3"><b>HELLO</b><small>my name is</small><span>Tanvi :)</span></div>
+        <div class="tag-count">SCHOOL #01 → #10+</div>
       </div>
-      <div class="paper-panel second">
-        <div class="tiny-label">SCHOOL #10+</div>
-        <div class="hand">Okay, I know<br>how this works.</div>
+      <div class="paper-panel">
+        <div class="tiny-label">By school #10</div>
+        <div class="hand">Okay. I know<br>how this works.</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section pressure" id="pressure">
-  <div class="section-top"><span>03 / THE PRESSURE</span><i>different problems. same brain.</i></div>
+<!-- ============ PRESSURE / WORK ============ -->
+<section class="section wrap pressure" id="pressure">
+  <div class="section-top"><span>Work &amp; play</span><i>different problems. same brain.</i></div>
   <h2>Some problems move<br><em>faster than others.</em></h2>
 
   <div class="problem-grid">
     <article class="problem">
-      <div class="problem-head"><span>01</span><b>MARKETS</b></div>
-      <div class="image-placeholder card-placeholder">PHOTO</div>
+      <div class="problem-head"><b>Markets</b><span>Barclays · FX</span></div>
+      <figure class="art art-chart">
+        <svg viewBox="0 0 320 190" role="img" aria-label="A price chart with a sudden spike">
+          <g class="grid">
+            <line x1="20" x2="300" y1="40" y2="40"/><line x1="20" x2="300" y1="85" y2="85"/><line x1="20" x2="300" y1="130" y2="130"/><line x1="20" x2="300" y1="170" y2="170"/>
+          </g>
+          <g class="candles">
+            <line x1="34" x2="34" y1="108" y2="140"/><rect x="29" y="114" width="10" height="18" class="up"/>
+            <line x1="52" x2="52" y1="104" y2="134"/><rect x="47" y="110" width="10" height="14" class="dn"/>
+            <line x1="70" x2="70" y1="112" y2="144"/><rect x="65" y="118" width="10" height="16" class="up"/>
+            <line x1="88" x2="88" y1="100" y2="128"/><rect x="83" y="106" width="10" height="14" class="up"/>
+            <line x1="106" x2="106" y1="98" y2="126"/><rect x="101" y="104" width="10" height="12" class="dn"/>
+            <line x1="124" x2="124" y1="104" y2="132"/><rect x="119" y="110" width="10" height="14" class="dn"/>
+            <line x1="142" x2="142" y1="96" y2="124"/><rect x="137" y="102" width="10" height="16" class="up"/>
+            <line x1="160" x2="160" y1="92" y2="120"/><rect x="155" y="98" width="10" height="12" class="up"/>
+            <line x1="178" x2="178" y1="36" y2="112"/><rect x="173" y="46" width="10" height="56" class="spike"/>
+            <line x1="196" x2="196" y1="50" y2="96"/><rect x="191" y="58" width="10" height="26" class="dn"/>
+            <line x1="214" x2="214" y1="66" y2="104"/><rect x="209" y="74" width="10" height="20" class="dn"/>
+            <line x1="232" x2="232" y1="70" y2="100"/><rect x="227" y="76" width="10" height="14" class="up"/>
+            <line x1="250" x2="250" y1="64" y2="96"/><rect x="245" y="70" width="10" height="16" class="up"/>
+            <line x1="268" x2="268" y1="60" y2="90"/><rect x="263" y="66" width="10" height="14" class="dn"/>
+          </g>
+          <circle cx="178" cy="40" r="17" class="ring"/>
+          <text x="200" y="26" class="anno">why??</text>
+          <text x="22" y="185" class="axis">EUR/USD · intraday (illustrative)</text>
+        </svg>
+      </figure>
       <h3>Something moved.<br>Figure out why.</h3>
-      <p>At Barclays, I work at the intersection of markets, technology and people — building analytical tools and solutions that help teams make better decisions.</p>
+      <p>At Barclays, I work at the intersection of markets, technology and people, building analytical tools that help trading teams make better decisions.</p>
+      <ul class="chips">
+        <li>Real-time FX analytics</li><li>Funding &amp; liquidity monitoring</li><li>Python · KDB+/q · React</li>
+      </ul>
     </article>
 
     <article class="problem match">
-      <div class="problem-head"><span>02</span><b>MATCHES</b></div>
-      <div class="image-placeholder card-placeholder">MATCH PHOTO</div>
+      <div class="problem-head"><b>Matches</b><span>Tennis</span></div>
+      <figure class="art art-court">
+        <svg viewBox="0 0 320 190" role="img" aria-label="A tennis court seen from above with a ball's path">
+          <rect x="30" y="20" width="260" height="150" class="court"/>
+          <g class="lines">
+            <rect x="30" y="20" width="260" height="150"/>
+            <line x1="30" x2="290" y1="38" y2="38"/><line x1="30" x2="290" y1="152" y2="152"/>
+            <line x1="160" x2="160" y1="14" y2="176" class="net"/>
+            <line x1="95" x2="95" y1="38" y2="152"/><line x1="225" x2="225" y1="38" y2="152"/>
+            <line x1="95" x2="225" y1="95" y2="95"/>
+          </g>
+          <path d="M60 140 Q 140 40 250 60" class="path"/>
+          <path d="M250 60 Q 190 120 110 128" class="path path2"/>
+          <circle cx="110" cy="128" r="6" class="ball"/>
+          <text x="236" y="52" class="anno">read it</text>
+          <text x="58" y="118" class="anno">adjust</text>
+        </svg>
+        <div class="score" aria-label="Score: 0 to 5"><span>TD</span><strong>0</strong><i>vs</i><b>5</b><span>OPP</span></div>
+      </figure>
       <h3>Down 0–5.<br>Figure out what changes.</h3>
-      <p>On a court, there is no perfect information. You read the opponent, adjust, and play the next point.</p>
-      <div class="score"><strong>0</strong><span>—</span><b>5</b></div>
+      <p>On a court, there is no perfect information. You read the opponent, adjust, and play the next point. Institute Gold Medalist in sports at IIT Gandhinagar; Lawn Tennis Secretary; Inter-IIT.</p>
+      <ul class="chips">
+        <li>Inter-IIT Sports Meet</li><li>Grew women’s participation</li>
+      </ul>
     </article>
 
     <article class="problem">
-      <div class="problem-head"><span>03</span><b>PUZZLES</b></div>
-      <div class="puzzle"><span>?</span><i>→</i><strong>!</strong></div>
+      <div class="problem-head"><b>Puzzles</b><span>Everywhere</span></div>
+      <figure class="art art-puzzle" aria-label="A grid of question marks with one solved square">
+        <div class="pgrid">
+          <span>?</span><span>?</span><span>?</span>
+          <span>?</span><span class="solved">!</span><span>?</span>
+          <span>?</span><span>?</span><span>?</span>
+        </div>
+      </figure>
       <h3>No obvious answer.<br>Keep looking.</h3>
-      <p>I like the moment when a messy problem starts to reveal its pattern. Work, games, or life — that moment is addictive.</p>
+      <p>I like the moment when a messy problem starts to reveal its pattern. Work, games, or life: that moment is addictive.</p>
+      <ul class="chips">
+        <li>Chemical Eng. + CS minor</li><li>Quant models</li>
+      </ul>
     </article>
   </div>
 
-  <div class="quote">A match is just<br><em>a problem that moves.</em></div>
+  <blockquote class="quote">A match is just<br><em>a problem that moves.</em></blockquote>
 </section>
 
-<section class="section people" id="people">
-  <div class="section-top"><span>04 / PEOPLE</span><i>this part matters most</i></div>
-  <div class="people-intro">
-    <div>
-      <h2>Some problems don't need solutions.<br><em>They need people.</em></h2>
-      <p>I've always liked the part of a problem that involves another person — listening, understanding what isn't being said, and figuring out what might actually help.</p>
+<!-- ============ PEOPLE ============ -->
+<section class="section-band band-green" id="people">
+  <div class="section wrap people">
+    <div class="section-top"><span>People</span><i>this part matters most</i></div>
+    <div class="people-intro">
+      <div>
+        <h2>Some problems don’t need solutions.<br><em>They need people.</em></h2>
+        <p>I’ve always liked the part of a problem that involves another person: listening, understanding what isn’t being said, and figuring out what might actually help.</p>
+      </div>
+      <a class="song" href="https://www.youtube.com/watch?v=oKYptn2gyNQ" target="_blank" rel="noopener">
+        <span class="vinyl" aria-hidden="true"></span>
+        <span class="song-text">
+          <small>A song I come back to</small>
+          <strong>People ↗</strong>
+          <span>Nikhil D’Souza</span>
+        </span>
+      </a>
     </div>
-    <a class="song" href="https://www.youtube.com/watch?v=oKYptn2gyNQ" target="_blank" rel="noopener">
-      <small>A SONG I COME BACK TO</small>
-      <strong>PEOPLE ↗</strong>
-      <span>Nikhil D'Souza</span>
-    </a>
-  </div>
 
-  <div class="people-grid">
-    <article class="people-card">
-      <div class="image-placeholder people-photo">PHOTO</div>
-      <b>LISTENING</b>
-      <h3>Sometimes the first step is just staying.</h3>
-      <p>At Barclays' Wellness Club, I became a peer supporter. More than anything, it taught me that people don't always need advice. Sometimes they need someone to listen, help them speak up, and stay connected.</p>
-    </article>
-    <article class="people-card">
-      <div class="image-placeholder people-photo">PHOTO</div>
-      <b>OPENING DOORS</b>
-      <h3>I like making spaces a little easier to enter.</h3>
-      <p>Through Women in Banking, mentoring and teaching, I've found myself coming back to the same thing: if a door feels intimidating, make it easier for someone else to walk through.</p>
-    </article>
-    <article class="people-card">
-      <div class="image-placeholder people-photo">PHOTO</div>
-      <b>COACHING</b>
-      <h3>Teach someone the game. Then let them play it.</h3>
-      <p>Coaching tennis reminded me that the best kind of help eventually makes itself unnecessary.</p>
-    </article>
+    <div class="people-grid">
+      <article class="people-card">
+        <div class="vignette" aria-hidden="true">
+          <svg viewBox="0 0 200 110"><path d="M40 90 V55 h30 v35 M40 70 h30 M70 55 V30" /><path d="M160 90 V55 h-30 v35 M160 70 h-30 M130 55 V30"/><path d="M92 40 q8 -10 16 0" class="soft"/><path d="M88 30 q12 -16 24 0" class="soft"/></svg>
+        </div>
+        <b>Listening</b>
+        <h3>Sometimes the first step is just staying.</h3>
+        <p>At Barclays’ Wellness Club, I became a peer supporter. It taught me that people don’t always need advice. Sometimes they need someone to listen, help them speak up, and stay connected.</p>
+      </article>
+      <article class="people-card">
+        <div class="vignette" aria-hidden="true">
+          <svg viewBox="0 0 200 110"><path d="M70 95 V20 h60 v75"/><path d="M70 20 L100 30 V105 L70 95" class="fill"/><circle cx="94" cy="62" r="2.5" class="dotf"/><path d="M130 95 h40 M30 95 h40" /><path d="M140 70 l14 0 m-6 -6 l6 6 l-6 6" class="soft"/></svg>
+        </div>
+        <b>Opening doors</b>
+        <h3>I like making spaces a little easier to enter.</h3>
+        <p>Through Women in Banking, mentoring and teaching, I keep coming back to the same thing: if a door feels intimidating, make it easier for someone else to walk through.</p>
+      </article>
+      <article class="people-card">
+        <div class="vignette" aria-hidden="true">
+          <svg viewBox="0 0 200 110"><ellipse cx="70" cy="50" rx="22" ry="28" transform="rotate(-25 70 50)"/><path d="M82 74 L104 102" /><path d="M58 30 l24 40 M52 46 l34 10" class="soft"/><circle cx="140" cy="40" r="11" class="ball"/><path d="M118 90 q20 -40 22 -38" class="soft dash"/><path d="M30 100 h140"/></svg>
+        </div>
+        <b>Coaching</b>
+        <h3>Teach someone the game. Then let them play it.</h3>
+        <p>Coaching tennis reminded me that the best kind of help eventually makes itself unnecessary.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="section lessons" id="matches">
-  <div class="section-top"><span>05 / MATCHES</span><i>borrowed wisdom</i></div>
-  <h2>Things I've learned<br><em>from people.</em></h2>
+<!-- ============ LESSONS ============ -->
+<section class="section wrap lessons" id="lessons">
+  <div class="section-top"><span>Lessons</span><i>borrowed wisdom</i></div>
+  <h2>Things I’ve learned<br><em>from people.</em></h2>
   <div class="lesson-grid">
-    <article><div class="circle">R</div><b>RAFAEL NADAL</b><h3>Stay in the point.</h3><p>Even when the point isn't going your way. Especially then.</p></article>
-    <article><div class="circle">M</div><b>MS DHONI</b><h3>Make the moment smaller.</h3><p>When everything gets loud, focus on the next decision.</p></article>
-    <article><div class="circle">F</div><b>ROGER FEDERER</b><h3>Keep showing up.</h3><p>Consistency rarely looks dramatic. That's probably why it works.</p></article>
+    <article class="lesson">
+      <div class="lesson-head"><span class="sport">Tennis</span><b>Rafael Nadal</b></div>
+      <h3>Stay in the point.</h3>
+      <p>Even when the point isn’t going your way. Especially then.</p>
+    </article>
+    <article class="lesson">
+      <div class="lesson-head"><span class="sport cricket">Cricket</span><b>MS Dhoni</b></div>
+      <h3>Make the moment smaller.</h3>
+      <p>When everything gets loud, focus on the next decision.</p>
+    </article>
+    <article class="lesson">
+      <div class="lesson-head"><span class="sport">Tennis</span><b>Roger Federer</b></div>
+      <h3>Keep showing up.</h3>
+      <p>Consistency rarely looks dramatic. That’s probably why it works.</p>
+    </article>
   </div>
-  <p class="lessons-end">And then there are the lessons that don't come with famous names.</p>
+  <p class="lessons-end">And then there are the lessons that don’t come with famous names. <span>Those are the ones I use most.</span></p>
 </section>
 
-<section class="section little" id="little">
-  <div class="section-top"><span>06 / THE LITTLE THINGS</span><i>the important unimportant stuff</i></div>
+<!-- ============ LITTLE THINGS ============ -->
+<section class="section wrap little" id="little">
+  <div class="section-top"><span>The little things</span><i>the important unimportant stuff</i></div>
   <div class="little-layout">
     <div>
-      <h2>I take my work seriously.<br><em>I don't take everything else quite as seriously.</em></h2>
-      <div class="little-list">
-        <p><span>🍜</span> Good Indian food. Always.</p>
-        <p><span>📍</span> Wandering around Mumbai without a plan.</p>
-        <p><span>📷</span> Taking photographs of things I know I'll forget.</p>
-        <p><span>😂</span> Making people laugh — usually by cracking jokes at exactly the wrong time.</p>
-        <p><span>💃</span> Dancing to Bollywood music with considerably more confidence than skill.</p>
-        <p><span>📺</span> Reality TV. My favourite way to completely switch my brain off.</p>
-        <p><span>🎾</span> Finding reasons to get back on a tennis court.</p>
-      </div>
+      <h2>I take my work seriously.<br><em>Everything else, a little less.</em></h2>
+      <ul class="little-list">
+        <li><span class="ico">Food</span>Good Indian food. Always.</li>
+        <li><span class="ico">Walks</span>Wandering around Mumbai without a plan.</li>
+        <li><span class="ico">Photos</span>Taking photographs of things I know I’ll forget.</li>
+        <li><span class="ico">Jokes</span>Making people laugh, usually at exactly the wrong time.</li>
+        <li><span class="ico">Dance</span>Bollywood music, with considerably more confidence than skill.</li>
+        <li><span class="ico">TV</span>Reality TV. My favourite way to switch my brain off.</li>
+        <li><span class="ico">Tennis</span>Finding reasons to get back on a court.</li>
+      </ul>
     </div>
     <div class="little-image">
-      <div class="image-placeholder tall-placeholder">PHOTO</div>
-      <div class="sticky">currently:<strong>figuring out<br>what's next.</strong></div>
+      <figure class="postcard">
+        <svg viewBox="0 0 300 380" role="img" aria-label="Illustration of Marine Drive at night, the Queen's Necklace of streetlights curving along the sea">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2a3a"/><stop offset=".62" stop-color="#4b3f52"/><stop offset="1" stop-color="#b9714f"/></linearGradient>
+            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a3a4a"/><stop offset="1" stop-color="#16202b"/></linearGradient>
+          </defs>
+          <rect width="300" height="380" fill="url(#sky)"/>
+          <circle cx="232" cy="72" r="16" fill="#f1e7c4" opacity=".92"/>
+          <g fill="#151c26">
+            <rect x="0" y="170" width="18" height="70"/><rect x="20" y="150" width="22" height="90"/><rect x="44" y="176" width="16" height="64"/><rect x="62" y="138" width="20" height="102"/><rect x="84" y="160" width="26" height="80"/><rect x="112" y="182" width="18" height="58"/><rect x="132" y="168" width="22" height="72"/><rect x="156" y="190" width="20" height="50"/><rect x="178" y="200" width="24" height="40"/><rect x="204" y="208" width="30" height="32"/><rect x="236" y="214" width="64" height="26"/>
+          </g>
+          <g fill="#f3d36b" opacity=".75">
+            <rect x="24" y="160" width="3" height="3"/><rect x="33" y="172" width="3" height="3"/><rect x="66" y="150" width="3" height="3"/><rect x="74" y="166" width="3" height="3"/><rect x="90" y="172" width="3" height="3"/><rect x="100" y="186" width="3" height="3"/><rect x="138" y="180" width="3" height="3"/><rect x="146" y="196" width="3" height="3"/><rect x="186" y="210" width="3" height="3"/><rect x="214" y="218" width="3" height="3"/>
+          </g>
+          <path d="M0 240 H300 V380 H0Z" fill="url(#sea)"/>
+          <path d="M0 236 C 90 236, 170 250, 300 300 L300 312 C 170 262, 90 248, 0 248 Z" fill="#2d2a2a"/>
+          <g class="necklace" fill="#ffd97a"></g>
+          <g stroke="#ffd97a" stroke-opacity=".18" stroke-width="2">
+            <line x1="40" y1="262" x2="40" y2="300"/><line x1="110" y1="270" x2="110" y2="318"/><line x1="180" y1="284" x2="180" y2="340"/><line x1="245" y1="304" x2="245" y2="360"/>
+          </g>
+        </svg>
+        <figcaption>Marine Drive, the Queen’s Necklace</figcaption>
+      </figure>
+      <div class="sticky">currently:<strong>figuring out<br>what’s next.</strong></div>
     </div>
   </div>
-  <div class="mumbai"><b>MY MUMBAI</b><span>MARINE DRIVE · IRANI CAFÉS · LONG WALKS · STREET FOOD · OLD FAVOURITES · NEW PLACES ·</span></div>
 </section>
 
-<section class="final">
-  <div class="kicker">07 / NEXT POINT</div>
-  <h2>There’s always<br><em>another point.</em></h2>
-  <p>For now, I'm in Mumbai, working in markets, playing tennis, learning, laughing, and figuring things out as I go.</p>
-  <div class="links">
-    <a href="mailto:tanvi.dixit2804@gmail.com">EMAIL ↗</a>
-    <a href="https://www.linkedin.com/in/tanvi-dixit/" target="_blank">LINKEDIN ↗</a>
-    <a href="https://github.com/tanvidixit2804" target="_blank">GITHUB ↗</a>
+<div class="marquee" aria-label="My Mumbai: Marine Drive, Irani cafés, long walks, street food, old favourites, new places">
+  <b>My Mumbai</b>
+  <div class="marquee-track" aria-hidden="true">
+    <span>Marine Drive ✦ Irani cafés ✦ Long walks ✦ Street food ✦ Old favourites ✦ New places ✦ Monsoon chai ✦&nbsp;</span>
+    <span>Marine Drive ✦ Irani cafés ✦ Long walks ✦ Street food ✦ Old favourites ✦ New places ✦ Monsoon chai ✦&nbsp;</span>
   </div>
-  <footer>TANVI DIXIT · MUMBAI · 2026</footer>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section class="final wrap" id="contact">
+  <div class="kicker"><span class="dot"></span>Next point</div>
+  <h2>There’s always<br><em>another point.</em></h2>
+  <p>For now, I’m in Mumbai, working in markets, playing tennis, learning, laughing, and figuring things out as I go. If any of this sounds like your kind of problem, say hi.</p>
+  <div class="links">
+    <a href="mailto:tanvidixit2804@gmail.com" class="btn btn-ink">tanvidixit2804@gmail.com</a>
+    <a href="https://www.linkedin.com/in/tanvi-dixit/" target="_blank" rel="noopener" class="btn btn-line">LinkedIn ↗</a>
+    <a href="assets/tanvi_resume.pdf" target="_blank" rel="noopener" class="btn btn-line">Résumé ↗</a>
+    <a href="https://github.com/tanvidixit2804" target="_blank" rel="noopener" class="btn btn-line">GitHub ↗</a>
+  </div>
+  <footer><span>Tanvi Dixit · Mumbai · 2026</span><a href="#top">Back to top ↑</a></footer>
 </section>
 
 </main>
